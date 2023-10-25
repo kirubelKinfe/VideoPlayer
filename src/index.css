@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .btnStyle {
+        @apply  w-[30px] h-[30px] p-0 text-lg text-white border-none bg-none cursor-pointer opacity-80 hover:opacity-100
+    }
+
+    .hoverStyle {
+        @apply flex items-center w-full py-2 pl-4 text-white cursor-pointer hover:bg-opacity-20 hover:bg-gray-300
+    }
+
+    .videoContainer {
+        @apply bg-black relative flex  m-auto justify-center w-[70%] max-w-[1000px]
+    }
+
+    .videoOverlay {
+        @apply absolute bottom-0 left-0 right-0 z-40 transition-all opacity-0   before:content-[''] before:absolute before:bottom-0 before:w-full before:-z-[1] before:aspect-[6/1] before:bg-gradient-to-t from-black before:opacity-80 to-transparent origin-bottom
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: rgb(39, 46, 58);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #a8a8a8;
+    border-radius: 5px;
+}
+
+::-webkit-slider-thumb:hover {
+    background-color: #a8a8a8;
+}
